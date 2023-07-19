@@ -1,5 +1,5 @@
 from setuptools import find_packages,setup
-from typing import List
+from typing import List  # import list for recognizable in Line "5"
 
 HYPEN_E_DOT='-e .'
 def get_requirements(file_path:str)->List[str]:
@@ -15,13 +15,13 @@ def get_requirements(file_path:str)->List[str]:
             requirements.remove(HYPEN_E_DOT)
     
     return requirements
-
+ # Meta data information about the project 
 setup(
 name='mlproject',
 version='0.0.1',
 author='Leela',
-author_email='leelavathi.@gmail.com',
-packages=find_packages(),
+author_email='leelavathi.rajan@gmail.com',
+packages=find_packages(),  # this will find the package __init__ under the folder "src" & you can use it as like "pandas or seaborn"
 install_requires=get_requirements('requirements.txt')
 
 )
